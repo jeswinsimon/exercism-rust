@@ -10,7 +10,7 @@ pub struct User {
 
 impl User {
     pub fn new(name: String, age: u32, weight: f32) -> Self {
-        Self { name: name, age: age, weight: weight }
+        Self { name, age, weight }
     }
 
     pub fn name(&self) -> &str {
@@ -26,10 +26,10 @@ impl User {
     }
 
     pub fn set_age(&mut self, new_age: u32) {
-        self.age = new_age
+        self.age = new_age;
     }
 
     pub fn set_weight(&mut self, new_weight: f32) {
-        self.weight = new_weight
+        self.weight = new_weight;
     }
 }
