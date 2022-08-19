@@ -16,11 +16,8 @@ pub fn create_buffer(count: usize) -> Vec<u8> {
 /// Its first five elements are `1, 1, 2, 3, 5`.
 pub fn fibonacci() -> Vec<u8> {
     let mut v = vec![1; 5];
-    for i in 0..5 {
-      v[i] = match i {
-        0..=1 => 1,
-        _ => v[i-2] + v[i-1]
-      }
+    for i in 2..5 {
+        v[i] = v[i - 2] + v[i - 1]
     }
     v
 }
